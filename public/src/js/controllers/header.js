@@ -17,7 +17,7 @@ angular.module('insight.system').controller('HeaderController',
       'link': 'blocks'
     }, {
       'title': 'Charts',
-      'link': 'charts'
+      'link': 'charts/block-size'
     }, {
       'title': 'Status',
       'link': 'status'

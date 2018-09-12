@@ -1,32 +1,23 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
 <section data-ng-controller="ChartsController" data-ng-init="list()">
+<div class="container">
   <div class="row">
-    <div class="col-xs-12 col-gray col-gray-fixed">
-      <div class="block-id">
-        <div class="icon-block text-center">
-          <span class="glyphicon glyphicon-stats"></span>
-          <h3><span translate>Charts</span></h3>
-        </div>
-      </div>
-      <div class="m20v text-center">
-        <span class="fader" data-ng-repeat='(type, c) in charts'>
-          <a class="btn btn-primary" style="margin-bottom: 3px" href="charts/{{type}}">{{c.name}}<a>
-        </span>
-      </div>
+    <div class="col-md-12">
+      <!-- Nav tabs -->
+      <div class="card">
+        <ul class="nav nav-tabs" role="tablist">
+          <li><a href="charts/block-size" aria-controls="block-size" role="tab" data-toggle="tab"><i class="fa fa-home"></i>  <span>Block Size</span></a></li>
+          <li><a href="charts/block-interval" aria-controls="block-interval" role="tab" data-toggle="tab"><i class="fa fa-user"></i>  <span>Block Interval</span></a></li>
+          <li><a href="charts/difficulty" aria-controls="difficulty" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>  <span>Difficulty</span></a></li>
+          <li><a href="charts/mining-revenue" aria-controls="mining-revenue" role="tab" data-toggle="tab"><i class="fa fa-cog"></i>  <span>Mining Revenue</span></a></li>
+        </ul>
+        <!-- Tab panes -->
+	<div class="tab-content">
+        <div role="tabpane" id="chart"></div>
+	</div>
+      </div> <!-- END CARD -->
     </div>
-    <div class="col-xs-12 col-md-9 col-md-offset-3">
-      <div class="page-header">
-        <h1>
-          <span>{{chartName}}</span>
-        </h1>
-      </div>
-      <div data-ng-show="loading">
-        <span translate>Loading chart...</span> <span class="loader-gif"></span>
-      </div>
-      <div data-ng-show="!loading">
-        <div id="chart"></div>
-      </div>
-    </div>
-  </div>
+  </div> <!-- END ROW -->
+</div><!-- END CONTAINER -- >
 </section>
 
