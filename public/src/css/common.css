@@ -103,7 +103,7 @@ margin-left: 0;
 }
 
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
-  background-color: #0e9de6;
+  background-color: #27db8d;
 }
 .navbar { min-height: 64px; }
 .navbar-default .navbar-toggle { 
@@ -162,7 +162,12 @@ margin-left: 0;
 
 .navbar-default .navbar-brand {
   color: #FFFFFF;
-  padding: 20px 15px;
+  padding: 15px 15px;
+}
+
+.navbar-brand>img {
+  height: auto;
+  width: 150px;
 }
 
 .navbar-form .form-control {
